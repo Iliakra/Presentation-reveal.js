@@ -19,7 +19,7 @@
 			<div class="slides">
 				<section><img src="src/slides-images/staticSlide1.jpg" height="500vh" alt="static slide image" class="slide-image"></section>
 				<section><img src="src/slides-images/staticSlide2.jpg" height="500vh" alt="static slide image" class="slide-image"></section>
-				<section><img src="src/slides-images/staticSlide3.jpg" height="500vh" alt="static slide image" class="slide-image"></section>
+				<section><img src="src/slides-images/staticSlide3.jpg" height="500vh" alt="static slide image" class="slide-image"><button class="addedButton">Go to Slide 2</button></section>
 				<section>Slide 4
 					<p class="fragment" data-fragment-index="3">Appears last</p>
 					<p class="fragment" data-fragment-index="1">Appears first</p>
@@ -27,7 +27,6 @@
 				</section>
 				<section>Slide 5
 					<a href="#/3">Go to the slide 4</a>
-					<button class="addedButton">КНОПКА</button>
 				</section>
 				<section>
 					<section>Vertical Slide 1</section>
@@ -35,7 +34,7 @@
 					<section>Vertical Slide 3</section>
 				</section>
 				<section><iframe width="100%" height="500vh" data-src="src/css_animation/index.html"></iframe></section>
-				<section><iframe width="100%" height="500vh" data-src="src/html_canvas/Slide_HTML-Canvas.html" class="html-canvas"></iframe></section>
+				<section><iframe width="100%" height="500vh" data-src="src/html_canvas/Slide_HTML-Canvas.html" class="html-canvas"></iframe><button type="button" class="addedButton2">Go to Slide 2</button></section>
 				<section><video src="src/video/video1.MOV" class="video" controls></video></section>
 				<section><p class="scroll-content">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecati cupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p></section>
 			</div>
@@ -88,7 +87,14 @@
 			
 
 			let addedButton = document.getElementsByClassName("addedButton")[0];
-			console.log('addedButton', addedButton);
+			addedButton.addEventListener("click", function(event) {
+				Reveal.slide( 1 );
+			})
+			
+			let addedButton_2 = document.getElementsByClassName("addedButton2")[0];
+			addedButton_2.addEventListener("click", function(event) {
+				Reveal.slide( 1 );
+			})
 
 			
 			Reveal.addEventListener('menu-ready', function (event) {

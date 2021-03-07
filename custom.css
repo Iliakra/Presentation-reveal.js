@@ -16,3 +16,34 @@
   border: 2px solid black;
   border-radius: 10px;
 }
+
+.addedButton {
+  display: flex;
+  position: absolute;
+  align-self: center;
+  margin-right: auto;
+  margin-left: auto;
+  bottom: 20%;
+  left: 20%;
+}
+
+.addedButton2 {
+  position: absolute;
+  color: white;
+  background-color: grey;
+  border: none;
+  bottom: 40%;
+  left: 10%;
+}
+
+.addedButton:hover {
+  color: red;
+}
+
+.addedButton2:hover {
+  border: 2px solid grey;
+}
+
+section {
+  position: relative;
+}
